@@ -14,10 +14,12 @@
 
 var app = angular.module('Sloan_test_1', [ 'ngRoute', 'ngCookies',
 		'ui.bootstrap', 'ui.grid', 'ui.grid.pagination',
-		'ui.grid.resizeColumns', 'ui.grid.edit' ]);
+		'ui.grid.resizeColumns', 'ui.grid.edit','facebook' ]);
 
 // configure our routes
-app.config(function($routeProvider) {
+app.config(function($routeProvider,FacebookProvider) {
+	FacebookProvider.init('1619632164961533');
+	
 	$routeProvider.when('/First_time_setup-en', {
 		templateUrl : 'app/views/en/First_time_setup-en.html',
 		controller : 'First_time_setup'
