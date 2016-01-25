@@ -1,0 +1,13 @@
+<div  style="min-height: 350px;">
+	<ul>
+		<li ng-repeat="organisation in baseOrganisation"
+			id="{{organisation.organisationName}}">
+			<div class="action">
+				<button class="btn danger delete"
+					ng-click="openDeleteDialog(campaign.campaignSno)">
+					<i class="fa fa-trash-o"></i> <span>Delete</span>
+				</button>
+			</div>
+		</li>
+	</ul>
+</div>
